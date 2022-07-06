@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="search()">Search</button>
+<p id="result"></p>
+<script>
+    let arrEl = ['car','bike','table','both']
+    let arrVie= ['ô tô','xe máy','bàn','chai']
+    function search() {
+        let input = document.getElementById('input').value;
+        if (arrEl.indexOf(input.toLowerCase()) !==-1) {
+            document.getElementById('result').innerHTML=arrVie[arrEl.indexOf(input.toLowerCase())];
+
+        }else {
+            document.getElementById('result').innerHTML='Không Tìm Thấy';
+        }
+
+    }
+</script>
+</body>
+</html>
